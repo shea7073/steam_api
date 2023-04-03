@@ -5,8 +5,6 @@ const credentials = require("../credentials.js");
 const dbUrl = 'mongodb+srv://' + credentials.username +
     ':' + credentials.password + '@' + credentials.host + '/' + credentials.database;
 
-let collection = null;
-
 
 module.exports = async (req, res) => {
     const client = new MongoClient(dbUrl);
@@ -14,7 +12,8 @@ module.exports = async (req, res) => {
 
     let db = client.db('Steam_Data')
     let collection = db.collection('Top_Games');
-    let results = await collection.find().toArray();
+    let date = new Date().toJSON().slice(0, 10);
+    let results = await collection.find({'date_scraped': date}).toArray();
 
 
     res.format({
