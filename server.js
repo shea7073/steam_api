@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-let routes = require('./routes/index');
+let routes = require('./routes/index');4
 app.use('/', routes);
 
 app.use(function(req, res) {
