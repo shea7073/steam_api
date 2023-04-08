@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ef61cfb-e7df-4a97-8f17-dd30904cd920" name="Changes" comment="fixed top games">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6ef61cfb-e7df-4a97-8f17-dd30904cd920" name="Changes" comment="cors">
+      <change beforePath="$PROJECT_DIR$/routes/getAllTopGames.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/getAllTopGames.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
       <updated>1680014763583</updated>
       <workItem from="1680014764678" duration="5894000" />
       <workItem from="1680535333429" duration="8891000" />
-      <workItem from="1680976978673" duration="1426000" />
+      <workItem from="1680976978673" duration="1765000" />
     </task>
     <task id="LOCAL-00001" summary="node versiov">
       <created>1680544778273</created>
@@ -81,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680545559232</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="cors">
+      <created>1680978495709</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680978495709</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,6 +97,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="node versiov" />
     <MESSAGE value="fixed top games" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed top games" />
+    <MESSAGE value="cors" />
+    <option name="LAST_COMMIT_MESSAGE" value="cors" />
   </component>
 </project>
