@@ -6,6 +6,7 @@ const top100current = require('./top100current');
 const playerTrends = require('./playerTrends');
 const topOnSale = require('./topOnSale');
 const gameSalesHistory = require('./gameSalesHistory');
+const currentPlayers = require('./currentPlayers');
 
 // get all today's top games
 router.get('/api/allTopGames', getAllTopGames);
@@ -23,6 +24,8 @@ router.get('/api/topOnSale', topOnSale);
 // get historical data on top selling status of game
 // takes in title in req.body.title
 router.get('/api/game-sales-history', gameSalesHistory);
+
+router.get('/api/current-players', currentPlayers);
 
 
 
