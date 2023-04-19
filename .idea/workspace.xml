@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ef61cfb-e7df-4a97-8f17-dd30904cd920" name="Changes" comment="header fix">
-      <change afterPath="$PROJECT_DIR$/routes/currentPlayers.js" afterDir="false" />
+    <list default="true" id="6ef61cfb-e7df-4a97-8f17-dd30904cd920" name="Changes" comment="added current players endpoint">
+      <change afterPath="$PROJECT_DIR$/routes/gameHistory24hr.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
@@ -69,7 +69,8 @@
       <workItem from="1680014764678" duration="5894000" />
       <workItem from="1680535333429" duration="8891000" />
       <workItem from="1680976978673" duration="2352000" />
-      <workItem from="1681838339102" duration="10473000" />
+      <workItem from="1681838339102" duration="10816000" />
+      <workItem from="1681944608848" duration="3896000" />
     </task>
     <task id="LOCAL-00001" summary="node versiov">
       <created>1680544778273</created>
@@ -106,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680978941640</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added current players endpoint">
+      <created>1681857151555</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681857151555</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +126,7 @@
     <MESSAGE value="cors" />
     <MESSAGE value="header" />
     <MESSAGE value="header fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="header fix" />
+    <MESSAGE value="added current players endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="added current players endpoint" />
   </component>
 </project>
