@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 let routes = require('./routes/index');
 app.use('/', routes);
-app.use(cors({origin: '*'}));
+app.use(cors({origin: '*', methods: ['GET', 'POST']}));
 
 app.use(function(req, res) {
     res.status(404);
