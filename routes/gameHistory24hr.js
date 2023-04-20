@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
     //console.log(req.body);
     let today = new Date(new Date().toISOString().split('T')[0]);
 
-    console.log(new Date().toISOString().split('T')[0]);
+    //console.log(new Date().toISOString().split('T')[0]);
     let results;
 
     const client = new MongoClient(dbUrl);
