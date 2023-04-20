@@ -15,10 +15,11 @@ module.exports = async (req, res) => {
     let date = new Date().toJSON().slice(0, 10);
     let results = await collection.find({'date_scraped': date}).toArray();
 
-    res.setHeader('Access-Control-Allow-Origin',  '*');
+
 
     res.format({
         'application/json': () => {
+            res.setHeader('Access-Control-Allow-Origin',  '*');
             res.json(results);
         },
     });

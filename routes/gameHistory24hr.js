@@ -22,9 +22,10 @@ module.exports = async (req, res) => {
     let collection = db.collection('Current_Players');
 
     results = await collection.find({'Data.Title': title, 'Updated': {$gte: today}}).toArray();
-    res.setHeader('Access-Control-Allow-Origin',  '*')
+
     res.format({
         'application/json': () => {
+            res.setHeader('Access-Control-Allow-Origin',  '*')
             res.jsonp(results);
         }
     });

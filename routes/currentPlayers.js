@@ -27,9 +27,10 @@ module.exports = async (req, res) => {
         results = await collection.find({'Updated': {$gte: new Date(query_string)}}).toArray();
     }).then(()=>{
             // res.json(results)
-        res.setHeader('Access-Control-Allow-Origin',  '*');
+
         res.format({
             'application/json': () => {
+                res.setHeader('Access-Control-Allow-Origin',  '*');
                 res.json(results);
             },
             'text/html': () => {
