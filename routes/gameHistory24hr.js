@@ -24,7 +24,7 @@ module.exports = async (req, res) => {
     results = await collection.find({'Data.Title': title, 'Updated': {$gte: today}}).toArray();
     //console.log(results.length);
 
-
+    res.setHeader('Access-Control-Allow-Origin',  '*');
     res.format({
         'application/json': () => {
             res.json(results);
