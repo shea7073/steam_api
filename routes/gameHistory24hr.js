@@ -26,6 +26,7 @@ module.exports = async (req, res) => {
     res.format({
         'application/json': () => {
             res.setHeader('Access-Control-Allow-Origin',  '*')
+            res.set('Access-Control-Allow-Origin', 'http://localhost:4200')
             res.jsonp(results);
         }
     });
