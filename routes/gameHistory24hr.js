@@ -21,16 +21,17 @@ module.exports = async (req, res) => {
     let db = client.db('Steam_Data');
     let collection = db.collection('Current_Players');
 
-    results = await collection.find({'Data.Title': title, 'Updated': {$gte: today}}).toArray();
-    //console.log(results.length);
-
-    res.setHeader('Access-Control-Allow-Origin',  '*');
-    res.format({
+    results = await collection.find({'Data.Title': title, 'Updated': {$gte: today}}).toArray().then(
+        res.setHeader('Access-Control-Allow-Origin',  '*');
+        res.format({
         'application/json': () => {
             res.json(results);
         }
     });
 }
+
+
+
 
 
 
