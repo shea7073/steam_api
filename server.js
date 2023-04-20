@@ -17,10 +17,10 @@ app.use(function(req, res) {
     res.status(404);
 });
 
-app.listen(PORT, function(){
-    console.log(`Server Started on port ${PORT}`);
-});
-
-// app.listen(3000, function(){
+// app.listen(PORT, function(){
 //     console.log(`Server Started on port ${PORT}`);
 // });
+
+app.listen(3000, function(){
+    console.log(`Server Started on port ${PORT}`);
+});
