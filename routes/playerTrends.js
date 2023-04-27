@@ -5,9 +5,6 @@ const credentials = require("../credentials.js");
 const dbUrl = 'mongodb+srv://' + credentials.username +
     ':' + credentials.password + '@' + credentials.host + '/' + credentials.database;
 
-let collection = null;
-
-
 module.exports = async (req, res) => {
 
     const title = req.body.title;

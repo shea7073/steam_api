@@ -5,9 +5,8 @@ const credentials = require("../credentials.js");
 const dbUrl = `mongodb+srv://sean:${credentials.password}@cluster0.pvuhuo1.mongodb.net/?retryWrites=true&w=majority`;
 
 module.exports = async (req, res) => {
-    let db;
 
-    let title = req.body.title;
+    let db;
 
     let today = new Date().toLocaleString()
     let date = today.split(',')[0];
@@ -29,12 +28,18 @@ module.exports = async (req, res) => {
         db = client.db('Steam_Data');
         let collection = db.collection('Current_Players');
 
-        results = await collection.find({'Data.Title': title, 'Updated': {$gte: isoMidnightDate}}).sort({'Updated': 1}).toArray();
+        results = await collection.find({'Updated': {$gte: isoMidnightDate}}).project({'Updated': 1, '_id': 0}).sort({'Updated': 1}).toArray();
+        const strippedResults = [];
+        results.forEach((entry)=> {
+            if (!strippedResults.includes(JSON.stringify(entry))){
+                strippedResults.push(JSON.stringify(entry))
+            }
+        })
+
         res.format({
             'application/json': () => {
                 res.setHeader('Access-Control-Allow-Origin',  '*')
-                res.set('Access-Control-Allow-Origin', 'http://localhost:4200')
-                res.jsonp(results);
+                res.jsonp(strippedResults);
             }
         });
     }
